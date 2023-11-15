@@ -457,50 +457,61 @@ main {
 /* ----- Navigation -----*/
 /* --------------------------------- */
 
-/* .nav {
-  min-block-size: 100vh;
-  position: fixed;
-  width: 100%;
-  background-color: #ff5e99;
-  background-image: var(--gradient-brand);
-  transition: 450ms var(--easing);
-  z-index: 3;
+nav{
+  position: relative;
+  background: var(--bg-color-secondary);
+  display: flex;
+  justify-content: space-between;
+  padding: var(--gutter-micro) var(--gutter-medium);
+  align-items: center;
 }
 
-.nav-items {
+.nav-icons{
   position: absolute;
-  top: 50%;
-  left: 15%;
-  transform: translateY(-50%) translateX(-15%);
-  list-style-type: none;
+  right: var(--gutter-medium);
+  width: 35px;
+  cursor: pointer;
 }
 
-.nav-item:not(:last-child) {
-  margin-block-end: var(--gutter-x-small);
+.menu-icon{
+  display: none;
 }
 
-.nav-item a {
-  display: inline-block;
-  font-size: var(--h2);
+nav > img{
+  width: 80px;
+}
+
+nav ul {
+  display: flex;
+  gap: var(--gutter-medium);
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a{
   text-decoration: none;
-  color: #fff;
+  color: var(--important);
 }
 
-.nav-item a::after {
-  content: "";
-  display: block;
-  block-size: var(--gutter-nano);
-  width: 100%;
-  transform: scale(0);
-  transform-origin: left;
-  background-color: white;
-  transition: transform 250ms var(--easing);
-}
+@media (max-width: 720px) {
+  .menu-icon{
+    display: block;
+  }
 
-.nav-item a:hover::after,
-.nav-item a:focus::after {
-  transform: scale(1);
-} */
+  nav ul{
+    background: var(--bg-color-secondary);
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    padding: var(--gutter-medium) var(--gutter-large);
+    transition: .5s;
+    transform: translateY(-150%);
+  }
+}
 
 
 /* --------------------------------- */
@@ -526,18 +537,18 @@ body.light .header {
     url("assets/images/hero-bg-light.webp");
 }
 
-.header-textbox {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 .header-text {
   font-size: var(--text-large);
   font-weight: 400;
   max-inline-size: 745px;
   margin-block-start: var(--gutter-micro);
   margin-block-end: var(--gutter-medium);
+}
+
+.hero-section{
+  height: calc(100vh - 94px);
+  display: flex;
+  align-items: center; 
 }
 
 @media (max-width: 1200px) {

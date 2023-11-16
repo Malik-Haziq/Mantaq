@@ -56,17 +56,6 @@ workEls.forEach((workEl) => {
   observer.observe(workEl);
 });
 
-// Shiny hover effect on cards that follows mouse
-
-const cards = document.querySelector(".cards");
-
-cards.addEventListener("mousemove", (e) => {
-  if (e.target.classList.contains("card")) {
-    const { x, y } = e.target.getBoundingClientRect();
-    e.target.style.setProperty("--x", `${e.clientX - x}px`);
-    e.target.style.setProperty("--y", `${e.clientY - y}px`);
-  }
-});
 
 // Toggle theme and store user preferred theme for future
 
@@ -118,4 +107,16 @@ logosWrappers.forEach(async (logoWrapper, i) => {
     logos[1].classList.remove("hide", "to-top", "to-bottom");
     logos[2].classList.add("hide", "to-bottom");
   }, 5600);
+});
+
+// Shiny hover effect on cards that follows mouse
+
+const cards = document.querySelector(".cards");
+
+cards.addEventListener("mousemove", (e) => {
+  if (e.target.classList.contains("card")) {
+    const { x, y } = e.target.getBoundingClientRect();
+    e.target.style.setProperty("--x", `${e.clientX - x}px`);
+    e.target.style.setProperty("--y", `${e.clientY - y}px`);
+  }
 });

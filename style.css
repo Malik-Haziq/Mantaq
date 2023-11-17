@@ -19,6 +19,7 @@
   --text-large: 1.6rem;
   --text-medium: 1.275rem;
   --text-small: 1.125rem;
+  --text-x-small: 1rem;
 
   --gradient-brand: radial-gradient(
       at 60% 31%,
@@ -52,6 +53,7 @@ body.dark {
   --bg-color-secondary: #161211;
   --important: #fff;
   --sub: #c3c3c3;
+  --light: #7c7777;
   --body: #989898;
   --border: #c0c0c015;
   --border-dark: #c0c0c02f;
@@ -64,6 +66,7 @@ body.light {
   --bg-color-secondary: #ffffff;
   --important: #000;
   --sub: #111;
+  --light: #666;
   --body: #585b63;
   --border: #62626234;
   --border-dark: #5e5e5e1f;
@@ -420,39 +423,6 @@ main {
     --radius: 45px;
   }
 }
-
-/* --------------------------------- */
-/* ----- Menu Button -----*/
-/* --------------------------------- */
-
-.menu-btn-container {
-  position: fixed;
-  width: 100%;
-  top: var(--gutter-x-small);
-  left: 0;
-  z-index: 4;
-}
-
-.menu-btn {
-  display: block;
-  margin-inline-start: auto;
-  border: 1px solid var(--border-dark);
-  /* Using width to prevent from jerk when text content changes */
-  width: 132px;
-  padding-block: var(--gutter-nano);
-  border-radius: var(--gutter-large);
-  text-decoration: none;
-  background-color: var(--bg-color-secondary);
-  color: var(--important);
-  cursor: pointer;
-}
-
-.menu-btn,
-.nav-items a {
-  font-stretch: 125%;
-  font-weight: 900;
-}
-
 /* --------------------------------- */
 /* ----- Navigation -----*/
 /* --------------------------------- */
@@ -487,7 +457,7 @@ nav{
 
 nav ul {
   display: flex;
-  gap: var(--gutter-medium);
+  gap: var(--gutter-large);
 }
 
 nav ul li {
@@ -496,7 +466,12 @@ nav ul li {
 
 nav ul li a{
   text-decoration: none;
-  color: var(--important);
+  color: var(--light);
+  transition: .4s;
+}
+
+nav ul li a:hover{
+  color: var(--sub);
 }
 
 @media (max-width: 720px) {
@@ -897,23 +872,9 @@ body.dark .work-links img {
 }
 
 @media (max-width: 650px) {
-  /* .article-box:nth-child(2),
-  .article-box:nth-child(3),
-  .article-box:last-child {
-    flex-basis: 100%;
-  } */
-
   .featured-article {
     margin-block-end: 0;
   }
-
-  /* .article-box:not(:last-child) {
-    margin-block-end: var(--gutter-x-small);
-  } */
-
-  /* .article-box:last-child {
-    display: block;
-  } */
 }
 
 /* --------------------------------- */
@@ -1213,6 +1174,80 @@ body.light .signatures {
   padding-block: var(--gutter-x-large);
 }
 
+.main-footer{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: var(--gutter-small);
+  gap: var(--gutter-medium);
+}
+
+.footer-logo-section{
+  flex-basis: 30%;
+}
+
+.links-footer{
+  flex-basis: 70%;
+}
+
+.footer-logo{
+  max-width: 100px;
+  margin-bottom: var(--gutter-micro);
+}
+
+.address{
+  font-size: var(--text-x-small);
+}
+
+.links-footer{
+  display: flex;
+  place-content: end;
+  gap: var(--gutter-x-large);
+}
+
+.footer-link-heading{
+  color: var(--body);
+  font-size: var(--text-small);
+  font-weight: 500;
+  margin-bottom: var(--gutter-micro);
+}
+
+.links-list{
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter-nano);
+}
+
+.links-list li{
+  list-style-type: none;
+}
+
+.links-list .footer-link{
+  text-decoration: none;
+  color: var(--light);
+  font-weight: 500;
+  font-size: var(--text-x-small);
+  transition: .4s;
+}
+
+.links-list .footer-link:hover{
+  color: var(--sub);
+}
+
+@media (max-width: 650px) {
+  .main-footer{
+    flex-direction: column;
+  }
+
+  .links-footer{
+    place-content: unset;
+  }
+
+  .address{
+    font-size: var(--text-small);
+  }
+}
+
 .footer-content {
   display: flex;
   align-items: center;
@@ -1221,17 +1256,11 @@ body.light .signatures {
 
 @media (max-width: 875px) {
   .footer-content {
-    flex-direction: column-reverse;
+    /* flex-direction: column-reverse; */
     gap: var(--gutter-small);
-  }
-  .footer-text {
-    text-align: center;
   }
 }
 
-.footer-text {
-  font-size: var(--text-small);
-}
 
 .footer-text a {
   color: var(--sub);
@@ -1294,7 +1323,7 @@ body.dark .footer-link img {
 }
 
 .theme-switch span {
-  font-size: 1rem;
+  font-size: var(--text-x-small);
   color: var(--sub);
 }
 

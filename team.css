@@ -1,0 +1,118 @@
+
+body.dark .about-header {
+    background-image: linear-gradient(#0000008b, #000000e6),
+      url("assets/images/about/about-bg.webp");
+}
+
+body.light .about-header {
+    background-image: linear-gradient(#ffffffa2, #ffffffe6),
+        url("assets/images/about/about-bg.webp");
+}
+
+.about-header{
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about-section{
+    height: calc(50vh - 112px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-details-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gutter-large);
+
+}
+
+.about-details-text-box{
+    flex-basis: 60%;
+}
+
+.about-details-img{
+    flex-basis: 40%;
+}
+
+.about-details-img img{
+    border-radius: 20px;
+}
+
+.om-section{
+    flex-direction: row-reverse;
+}
+@media (max-width: 920px) {
+    .about-details-text-box{
+        flex-basis: 50%;
+    }
+    
+    .about-details-img{
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 720px) {
+    .about-details-section{
+        flex-direction: column;
+    }
+    .om-section{
+        flex-direction: column;
+    }
+    
+}
+
+
+.team-section{
+    padding-block-start: var(--gutter-x-large);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: var(--gutter-medium);
+    column-gap: var(--gutter-x-small);
+    place-items: center;
+    margin-block-end: var(--gutter-x-large);
+}
+
+.team-member{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 200px;
+}
+
+.member-img{
+    min-width: 180px;
+    border-radius: 100%;
+    margin-bottom: var(--gutter-micro);
+}
+
+.member-position{
+    font-size: var(--text-small);
+    color: var(--body);
+}
+
+@media (max-width: 885px) {
+    .member-img{
+        min-width: 100px;
+    }
+}
+
+@media (max-width: 720px) {
+    .team-section{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .team-section{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .member-img{
+        min-width: 150px;
+    }
+}

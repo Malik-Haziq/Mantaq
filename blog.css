@@ -11,9 +11,10 @@
 }
   
 .blog-section{
-    height: calc(100vh - 112px);
+    height: calc(50vh - 112px);
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 body.dark .blog-header {

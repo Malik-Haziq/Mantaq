@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantaq Tech Blog</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="team.css" />
+  <script src="./script.js" defer></script>
+
+</head>
+<body>
+
+    <script>
+        const theme = localStorage.getItem("theme") || "light";
+        document.body.classList.add(theme);
+    </script>
+
+    <header class="about-header">
+        <nav>
+            <a href="index.html">
+                <img src="./assets/images/logo.png" alt="mantaq" class="mantaq-logo">
+            </a>
+            <img src="./assets/images/menu-icon.svg" alt="menu" class="nav-icons menu-icon">
+            <img src="./assets/images/close-icon.svg" alt="close" class="nav-icons close-icon hidden">
+            <ul>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#work">Portfolio</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="">Team</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <figure class="about-section container">
+            <div class="about-text-box">
+              <h1 class="h1">
+                About Us
+              </h1>
+            </div>
+        </figure>
+    </header>
+
+    <section class="container about-details-section">
+        <aside class="about-details-text-box">
+            <h2 class="about-details-heading">Who We Are</h2>
+            <p>Innovative software development company, crafting tailored solutions for diverse needs. Skilled team, high-quality applications, and commitment to excellence.</p>
+        </aside>
+        <picture class="about-details-img">
+            <img src="./assets/images/about/wwa.webp" alt="group of people" loading="lazy">
+        </picture>
+    </section>
+
+    <section class="container about-details-section om-section">
+        <aside class="about-details-text-box">
+            <h2 class="about-details-heading">Our Mission</h2>
+            <p>Empowering businesses through cutting-edge software solutions. Our mission is to redefine possibilities, driving innovation, and fostering digital excellence for clients.</p>
+        </aside>
+        <picture class="about-details-img">
+            <img src="./assets/images/about/om.webp" alt="group of people putting hands on top of eacth other's hand" loading="lazy">
+        </picture>
+    </section>
+
+    <section class="container about-details-section">
+        <aside class="about-details-text-box">
+            <h2 class="about-details-heading">Our Vission</h2>
+            <p>Pioneering a tech landscape where our transformative software solutions propel businesses towards unparalleled success, innovation, and sustained digital growth.</p>
+        </aside>
+        <picture class="about-details-img">
+            <img src="./assets/images/about/ov.webp" alt="group of people" loading="lazy">
+        </picture>
+    </section>
+
+    <section>
+        <div class="conatianer">
+            <h2 class="h2">Our Team</h2>
+            <div class="team-section container">
+                <article class="team-member">
+                    <img src="./assets/images/team/1.jpg" alt="Team memner image" class="member-img">
+                    <p class="member-name">Rex Hubbard</p>
+                    <span class="member-position">Founder</span>
+                </article>
+                <article class="team-member">
+                    <img src="./assets/images/team/2.jpg" alt="Team memner image" class="member-img">
+                    <p class="member-name">Perry Mills</p>
+                    <span class="member-position">CEO</span>
+                </article>
+                <article class="team-member">
+                    <img src="./assets/images/team/3.jpg" alt="Team memner image" class="member-img">
+                    <p class="member-name">Darryl Zimmerman</p>
+                    <span class="member-position">Frontend Developer</span>
+                </article>
+                <article class="team-member">
+                    <img src="./assets/images/team/4.jpg" alt="Team memner image" class="member-img">
+                    <p class="member-name">Lawrence Holland</p>
+                    <span class="member-position">Backend Developer</span>
+                </article>
+                <article class="team-member">
+                    <img src="./assets/images/team/5.jpg" alt="Team memner image" class="member-img">
+                    <p class="member-name">Otis Frazier</p>
+                    <span class="member-position">SEO Expert</span>
+                </article>
+                <article class="team-member">
+                    <img src="./assets/images/team/6.jpg" alt="Team memner image" class="member-img">
+                    <p class="member-name">Amber Wheeler</p>
+                    <span class="member-position">Social media markiter</span>
+                </article>
+                <article class="team-member">
+                    <img src="./assets/images/team/6.jpg" alt="Team memner image" class="member-img">
+                    <p class="member-name">Rex Hubbard</p>
+                    <span class="member-position">Founder</span>
+                </article>
+                <article class="team-member">
+                    <img src="./assets/images/team/6.jpg" alt="Team memner image" class="member-img">
+                    <p class="member-name">Rex Hubbard</p>
+                    <span class="member-position">Founder</span>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+          <div class="footer-content">
+            <nav>
+              <ol class="footer-links">
+                <li class="footer-link">
+                  <a title="Linkedin" href="https://www.linkedin.com/company/mantaq/" target="_blank"
+                    rel="noopener"><img loading="lazy" src="assets/images/social-links/linkedin.svg" alt="Linkedin" /></a>
+                </li>
+              </ol>
+            </nav>
+            <label class="theme-switch" for="theme-switch">
+              <span>Light Theme</span>
+              <input type="checkbox" id="theme-switch" role="switch" />
+            </label>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>

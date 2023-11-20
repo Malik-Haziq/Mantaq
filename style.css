@@ -807,6 +807,27 @@ body.dark .work-links img {
   animation-delay: calc(var(--delay) * 2);
 }
 
+.show-work{
+  display: grid;
+  place-items: center;
+}
+
+.show-work-btn{
+  text-decoration: none;
+  color: var(--body);
+  padding: var(--gutter-nano) var(--gutter-x-small);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: .5s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.show-work-btn:hover{
+  color: var(--important);
+  border-color: var(--important);
+}
+
 @keyframes slide-up {
   from {
     transform: translateY(45px);
